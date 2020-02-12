@@ -3,9 +3,11 @@ import axios from 'axios';
 
 const Movie = (props) => {
   const [movie, setMovie] = useState();
- 
+  //console.log("Props", props);
+  const id = Number(props.match.params.id);
   useEffect(() => {
-    const id = 1;
+    
+  
     // change ^^^ that line and grab the id from the URL
     // You will NEED to add a dependency array to this effect hook
 
@@ -18,7 +20,7 @@ const Movie = (props) => {
           console.error(error);
         });
 
-  },[]);
+  },[id]);
   
   // Uncomment this only when you have moved on to the stretch goals
   // const saveMovie = () => {
