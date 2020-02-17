@@ -5,6 +5,7 @@ const SavedList = props => (
   <div className="saved-list">
     <h3>Saved Movies:</h3>
     {props.list.map(movie => (
+      //props.list.find(movie) ? null :
       <span className="saved-movie">{movie.title}</span>
     ))}
     <Link className="no-decoration" to="/">

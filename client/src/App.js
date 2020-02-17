@@ -10,6 +10,7 @@ const App = () => {
   const [savedList, setSavedList] = useState([]);
 
   const addToSavedList = movie => {
+   savedList.find(existingMovie => existingMovie === movie) ||
     setSavedList([...savedList, movie]);
   };
 
@@ -17,8 +18,8 @@ const App = () => {
     <div>
       <SavedList list={savedList} />
       <div>
-        <Route path="/movies/:id" component={Movie} />
-        <Route exact path="/" component={MovieList} />
+        <Route path="/movies/:id" render={(props) => <Movie {...props} addToSavedList={addToSavedList} />} />
+        <Route exact path="/" render={() => <MovieList addToSavedList={addToSavedList} />} />
       </div>
     </div>
   );

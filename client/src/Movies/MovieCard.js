@@ -17,11 +17,14 @@ const MovieCard = props => {
 
         {stars && stars.map(star => (
           <div key={star} className="movie-star">
-            {star}Test!
+            {star}
           </div>
         ))}
       </div>
-      <div className="save-button" onClick={() => props.setSavedList(title)}>Save</div>
+      <div className="save-button" onClick={e => {
+        e.preventDefault();
+        props.addToSavedList(props.movie); 
+        }}>Save</div>
     </div>
   );
 };

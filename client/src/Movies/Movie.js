@@ -33,7 +33,7 @@ const Movie = (props) => {
     return <div>Loading movie information...</div>;
   }
 
-  return <MovieCard movie={movie} />;
+  return <MovieCard movie={movie} addToSavedList={props.addToSavedList}/>;
 }
 
 export default Movie;
