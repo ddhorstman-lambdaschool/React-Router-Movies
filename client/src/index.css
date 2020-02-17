@@ -42,9 +42,10 @@ body {
 
 .saved-movie {
   margin: 0 10px;
-}
-.saved-active {
   color: blue;
+}
+.saved-movie.active {
+  background-color: lightgrey;
   border: 1px solid grey;
   padding: 5px;
 }
