@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MovieCard = props => {
-  const placeholder={title: "", director: "", metascore:"",stars:""};
+  const placeholder = { title: "", director: "", metascore: "", stars: "" };
   const { title, director, metascore, stars } = props.movie || placeholder;
   return (
     <div className="save-wrapper">
@@ -23,8 +23,8 @@ const MovieCard = props => {
       </div>
       <div className="save-button" onClick={e => {
         e.preventDefault();
-        props.addToSavedList(props.movie); 
-        }}>Save</div>
+        props.addToSavedList(props.movie);
+      }}>Save</div>
     </div>
   );
 };

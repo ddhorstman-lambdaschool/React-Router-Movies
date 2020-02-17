@@ -10,8 +10,9 @@ const App = () => {
   const [savedList, setSavedList] = useState([]);
 
   const addToSavedList = movie => {
-   savedList.find(existingMovie => existingMovie === movie) ||
-    setSavedList([...savedList, movie]);
+    savedList.find(existingMovie => existingMovie.title === movie.title)
+      ||
+      setSavedList([...savedList, movie]);
   };
 
   return (
